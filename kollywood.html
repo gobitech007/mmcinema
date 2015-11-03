@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>MM</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>    
+    <script src="js/jquery.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/angular.min.js"></script>
+	<!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+	<script src="js/common.js"></script>
+	<script>	
+		$(function(){$('header').load('header.html');$('footer').load('footer.html');});
+	</script>
+</head>
+<body id="page-top" class="index"  ng-app="myhome" ng-controller="commonCtrl">
+<header></header>
+<section class="paddIngZero" style="margin-top:115px">
+	 <div class="container">
+		<div class=" col-sm-6 col-md-8 col-xs-6 nopaddingleft listWrappadding" ng-controller="kollywood">
+			<div class="combine"   >			
+				<div class="lispageCombine"  ng-repeat="x in names.slice(0, 8)">
+					 <div class="leftHome pull-left">
+						<div class="latHm"  ng-href="details.html?q=dt&id={{x.hid}}&ty=kw" ng-click="loc($event)">
+							<div class="repeatNew-hm">
+								<img src="uploads/{{ path }}/thumb_2/{{ x.img_path }}" class="img-responsive" alt="">
+								<span class="title">{{ x.name }}</span>
+							</div>
+						</div>
+					 </div>
+					 <div class="pull-left listpageTxtwrap">
+						<h4 ng-click="goLogin('details.html')">{{ x.name }}</h4>
+						{{ x.description | limitTo: 250 }}{{  x.description.length > 250 ? ' ...' : ''}}						 
+					 </div> 
+				 </div>
+			 </div>
+		</div>
+		<div class=" col-sm-6 col-md-4 col-xs-6  nopaddingright ">
+			<script src="http://caitp.github.io/ng-media/ng-media.js"></script>
+			<aside id="trailler" class="col-md-12 nopadding" ng-controller="kollywoodtrailer">
+				<h4>Trailler</h4>
+				<div class="trailler">
+					<div class="col-md-6 nopaddingleft" ng-repeat="x in names.slice(0, 3)" ng-click="ifa($event)">
+						<img src="uploads/{{ path }}/thumb_2/{{ x.img_path }}" alt=""  data-toggle="modal" data-target="#myModal{{x.hid}}" class="img-responsive" />
+						<span data-href="x.video_path" class="ng-hidden iframevideo"></span>  
+						<!-- Modal -->
+						<div class="modal fade" id="myModal{{x.hid}}" role="dialog" >
+						  <div class="modal-dialog" role="document">
+							<div class="modal-content">
+							  <div class="modal-header">
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+								<h4 class="modal-title" id="myModalLabel">{{x.name}}</h4>
+							  </div>
+							  <div class="modal-body">
+								<iframe width="100%" height="400" src="{{getvideourl(x.video_path)}}" frameborder="0" allowfullscreen></iframe>
+							  </div>
+							</div>
+						  </div>
+						</div>
+					</div>
+					<!--<div class="col-md-6 nopaddingleft"><img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/></div>
+					<div class="col-md-6 nopaddingleft"><img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/></div>
+					<div class="col-md-6 nopaddingleft"><img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/></div>-->
+				</div>
+			</aside>
+			<aside id="review" class="col-md-12 nopadding">
+				<h4>Review</h4>
+				<div class="trailler reviewPortion" ng-controller="kollywood">
+					<div class="col-md-6 nopaddingleft" ng-repeat="x in names.slice(0, 4)" ng-if="x.review != ''" ng-href="details.html?q=dt&id={{x.hid}}&ty=kw" ng-click="loc($event)">
+						<!--<span class="reviewStar" data-review="{{x.review}}"><i class="fa fa-star" ng-repeat="y in getNumber(x.review) track by $index"></i></span>-->
+						<span class="reviewStar" data-review="{{x.review}}"></span>
+						<img src="uploads/{{ path }}/thumb_2/{{ x.img_path }}" alt="" class="img-responsive"/>
+					</div>
+					<!--<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>-->
+				</div>
+			</aside>
+			<aside id="addpost" class="col-md-12 nopadding paddingbottom">
+				<h4>Addpost</h4>
+				<img src="img/govt-jobs-latest.jpg" alt="" class="img-responsive"/>
+			</aside>
+		</div>
+	 </div>
+</section>
+<footer></footer>    
+</body>
+</html>

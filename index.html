@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>MM</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>    
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" class="index"  ng-app="myhome">
+	<header id="header"></header>
+	<section class="paddIngZero" style="margin-top:105px">
+        <div class="container">	
+             <div class="intro-text hmScrn">
+			<div class="combine"  ng-controller="kollywood" >			
+			 <div  ng-repeat="x in names.slice(0, 1)">
+			 <div class="leftHome">
+				<h3 class="section-heading">Kollywood</h3>
+				<div class="latHm">
+					<div class="repeatNew-hm ckaction" ng-href="details.html?q=dt&id={{x.hid}}&ty=kw" ng-click="loc($event)">
+						<img src="uploads/kw/thumb/{{ x.img_path }}" class="img-responsive" alt="">
+						<span class="title">{{ x.name }}</span>												
+						<i class="glyphicon glyphicon-triangle-right after-icon"></i>
+					</div>
+				</div>
+			 </div>
+			 <div class="rightHm">
+			 <newsTitle>{{ x.name }}</newsTitle>
+			 {{ x.description | limitTo: 800 }}{{  x.description.length > 800 ? ' ...' : ''}}						 
+			 </div> 
+			 </div>
+			 </div>
+			<div style="padding:10px;"></div>			 
+			<div class="latHm "  ng-controller="kollywood">				
+			<div class="col-lg-3 col-md-4 col-xs-6 nvg-list" ng-repeat="x in names.slice(1, 9)" >
+				<a class="thumbnail imgThumb" href="details.html?q=dt&id={{x.hid}}&ty=kw">
+					<img class="img-responsive" src="uploads/kw/thumb/{{ x.img_path }}" alt="">
+					<span >{{ x.name }}</span>
+				</a>			
+			</div>				
+			</div>
+			<a href="kollywood.html" class="moreDetails"><i class="fa fa-hand-o-right"></i> Learn More</a>
+            </div>		
+        </div>
+	</section>
+	<section class="paddIngZero" style="margin-top:20px">
+        <div class="container">	
+             <div class="intro-text hmScrn" style="border-top:1px solid #999999">
+			<div class="combine"  ng-controller="customersCtrl" >			
+			 <div  ng-repeat="x in names.slice(0, 1)">
+			 <div class="leftHome">
+				<h3 class="section-heading">Bollywood</h3>
+				<div class="latHm">
+					<div class="repeatNew-hm">
+						<img src="{{ x.img }}" class="img-responsive" alt="">
+						<span  class="title">{{ x.name }}</span>												
+						<i class="glyphicon glyphicon-triangle-right after-icon"></i>
+					</div>
+				</div>
+			 </div>
+			 <div class="rightHm">
+			 <newsTitle>{{ x.name }}</newsTitle>
+			 {{ x.desc | limitTo: 900 }}{{  x.desc.length > 900 ? ' ...' : ''}}						 
+			 </div> 
+			 </div>
+			 </div>
+			<div style="padding:10px;"></div>			 
+			<div class="latHm "  ng-controller="customersCtrl">				
+			<div class="col-lg-3 col-md-4 col-xs-6 nvg-list" ng-repeat="x in names.slice(1, 9)" >
+				<a class="thumbnail imgThumb" href="#">
+					<img class="img-responsive" src="{{ x.img }}" alt="">
+					<span>{{ x.name }}</span>
+				</a>			
+			</div>				
+			</div>
+			<a href="#" class="moreDetails"><i class="fa fa-hand-o-right"></i> Learn More</a>
+            </div>		
+        </div>
+	</section>
+	<section class="paddIngZero" style="margin-top:20px">
+        <div class="container">	
+             <div class="intro-text hmScrn" style="border-top:1px solid #999999">
+			<div class="combine"  ng-controller="customersCtrl" >			
+			 <div  ng-repeat="x in names.slice(0, 1)">
+			 <div class="leftHome">
+				<h3 class="section-heading">Tollywood</h3>
+				<div class="latHm">
+					<div class="repeatNew-hm">
+						<img src="{{ x.img }}" class="img-responsive" alt="">
+						<span  class="title">{{ x.name }}</span>												
+						<i class="glyphicon glyphicon-triangle-right after-icon"></i>
+					</div>
+				</div>
+			 </div>
+			 <div class="rightHm">
+			 <newsTitle>{{ x.name }}</newsTitle>
+			 {{ x.desc | limitTo: 900 }}{{  x.desc.length > 900 ? ' ...' : ''}}						 
+			 </div> 
+			 </div>
+			 </div>
+			<div style="padding:10px;"></div>			 
+			<div class="latHm "  ng-controller="customersCtrl">				
+			<div class="col-lg-3 col-md-4 col-xs-6 nvg-list" ng-repeat="x in names.slice(1, 9)" >
+				<a class="thumbnail imgThumb" href="#">
+					<img class="img-responsive" src="{{ x.img }}" alt="">
+					<span >{{ x.name }}</span>
+				</a>			
+			</div>				
+			</div>
+			<a href="#" class="moreDetails"><i class="fa fa-hand-o-right"></i> Learn More</a>
+            </div>		
+        </div>
+	</section>
+	<footer></footer>    
+<script src="js/jquery.js"></script> 
+<script src="js/agency.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/common.js"></script>
+<script>	
+	$(function(){
+		$('header').load('header.html');		
+		$('footer').load('footer.html');		
+	});
+</script>
+</body>
+</html>

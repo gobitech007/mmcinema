@@ -1,0 +1,324 @@
+.container{
+		padding-left:0;
+		padding-right:0;
+		width:1200px;
+}
+.mm-social-icon{
+	  text-align: center;
+  position: relative;
+  margin-right: 20px;
+  margin-left:30px;
+  top: 0;
+  width: auto;
+  display: inline-block;
+  float: right;
+}
+.navbar-nav>li{
+		padding:0 15px;
+}
+.mm-social-icon ul li{
+	display:inline-block;
+	padding:0;
+}
+.mm-social-icon ul li a{
+	margin:0px;line-height:normal;height:auto;
+}
+.mm-social-icon ul li a:hover{
+		border-radius:0;
+		height:auto;
+}
+.hidden{
+	display:none;
+}
+header {
+	background-attachment:fixed;
+	background-color:rgba(#fff,#fff,#fff,0.5);
+	background-image:none;
+}
+.section-heading{color:#000;}
+.navbar-nav>li ul{display:none;position: absolute;right: -2px;bottom:-12px;margin: 0;padding: 0;min-width: 20em;}
+.navbar-nav>li:hover{
+	-webkit-transition: all .25s ease;
+       -moz-transition: all .25s ease;
+        -ms-transition: all .25s ease;
+         -o-transition: all .25s ease;
+            transition: all .25s ease;
+}
+.navbar-default .nav li:hover ul{display:block;list-style:none;}
+.navbar-nav>li ul li{float:right;}
+.navbar-nav>li a{padding-top:5px}
+.navbar-nav>li ul li a{padding:5px 15px !important;}
+.leftHome{
+	width:25%;
+	display:inline-block;
+}
+.latHm{display:inline-block;cursor:pointer;}
+.repeatNew-hm{
+	width:100%;
+	max-height:150px;
+	text-align:center;
+	display: -webkit-flex; /* Safari */
+    -webkit-flex-flow: row wrap; /* Safari 6.1+ */
+    -webkit-align-content: space-around; /* Safari 7.0+ */
+    display: flex;
+    flex-flow: row wrap;
+    align-content: space-around;
+	position:relative;
+	margin-bottom:10px;
+	text-align:center;
+}
+.repeatNew-hm  span{
+	position:absolute;
+	bottom1:0;
+	width:100%;
+	padding:5px 0;
+	left:0;	
+	background-color1:rgba(0,0,0,0.5);
+	color:#fff;
+}
+.rightHm{
+	width: 74rem;
+	padding:10px;
+	border: 1px solid #fff;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0px 0 0 15px;
+	max-height: 250px;
+	overflow: hidden;
+}
+.rightHm newsTitle{
+	font-size:24px;
+	font-weight:bold;
+	color:#000;	
+	display: block;
+	text-transform: capitalize;
+}
+.hmScrn{
+	text-align:left;
+	padding-bottom:20px;
+}
+.moreDetails{
+	text-align:right;	
+	float:right;
+	color:#000;
+}
+.portfolio-item{
+	padding:0 1px;
+	margin-bottom:5px !important;
+}
+.paddIngZero{padding:0;}
+.New-Video-Gall{padding:15px 15px !important;}
+.nvg-list{
+		padding:0 10px 10px 0;
+}
+.after-icon{
+	  position: absolute;
+	  right: -26px;
+	  color: #222;
+	  font-size: 35px;
+	  top: 54px;
+}
+.navbar-default.navbar-shrink{
+		padding:0;
+		background:none;
+}
+.navlogo{
+		background:#222;
+		padding:10px 5px 0;
+}
+.paddIngZero:last-of-type{
+		margin-bottom:10px;
+}
+footer{
+		padding-bottom:0;
+}
+footer .container{
+		background:#222;
+}
+footer .container .row{
+	margin:0;
+}
+/****Details page*****/
+.wrapperDetails{
+	padding:0;
+	margin:0;
+}
+.imgThumb{
+		margin-bottom:2px;
+		max-height:140px;
+		overflow:hidden;
+		border:none;
+		padding:0;
+		position:relative;
+		text-align:center;
+}
+.imgThumb span,span.title{
+		position: absolute;
+  z-index: 100;
+  color: #fff;
+  width: 95%;
+  top: 46%;
+  left:0;
+  margin: 0;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 16px;
+  opacity: 0.8;
+  margin: 0 10px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.listWrappadding{
+		padding-left:0;
+		border-right-width:0.1em;
+		border-right-style:solid;
+		border-right-color:rgba(3,3,3,0.2);
+		box-shadow:none;	
+}
+.lispageCombine{
+		width:100%;
+		display:inline-block;
+		border-bottom-width:0.1em;
+		border-bottom-style:solid;
+		border-bottom-color:rgba(3,3,3,0.2);
+		box-shadow:none;
+		-webkit-box-sizing:initial;
+		box-sizing:initial;
+		margin-bottom:5px;
+}
+.lispageCombine:nth-last-of-type(1),.listWrappadding:nth-last-of-type(1) {
+	border:none;
+}
+.lispageCombine h4{
+		margin-top:0;
+		cursor:pointer;
+}
+.listpageTxtwrap{
+	margin-left:10px;
+	padding-left:10px;
+	width:70%;
+}
+.nopadding{
+		padding:0;
+}
+.nopaddingleft{
+	padding-left:0;
+}
+.nopaddingright{
+	padding-right:0;
+}
+.paddingbottom{
+		padding-bottom:10px;
+}
+.trailler div.nopaddingleft{
+	text-align:center;	
+	margin-bottom:10px;
+	padding-left:10px;
+	cursor:pointer;
+	max-height:97px;
+	overflow:hidden;
+}
+.videotrailer div.nopaddingleft{
+	max-height:inherit;	
+}
+.trailler div img{
+	display:inherit;
+	max-height:100%;
+}
+aside{
+	border-top:1px solid rgba(3,3,3,0.2);
+	display:inline-block;
+}
+aside:first-of-type{
+	border:none;
+}
+.relatedNews{
+		padding-top:15px;
+		margin-top:15px;
+		border-top:1px solid rgba(3,3,3,0.2);
+}
+.socialIcon{
+		background-color:#000;
+		margin-right:5px;
+}
+.socialIcon:hover{
+	color:#fff;
+}
+.reviewPortion{
+	position:relative;
+}
+.reviewPortion .reviewStar{
+	position:absolute;
+	top:3px;
+	left:18px;
+	color:#fed136;
+}
+.reviewPortion .reviewStar i{
+	margin-right:2px;
+	font-size:16px;
+}
+.reviewWrap .reviewStar i{
+	margin-right:2px;
+	font-size:24px;
+}
+.reviewScore{
+	position: relative;
+	font-size: 16px;
+	color: #333;
+	left: 6px;
+	top: -3px;
+}
+.reviewScore:before{
+		content:' - ';
+}
+.reviewScore:after{
+		content:' / 5';
+}
+.reviewPoint moviename,
+.reviewPoint director,
+.reviewPoint heroname,
+.reviewPoint herionename,
+.reviewPoint music,
+.reviewPoint releasedate,
+.reviewPoint producername{
+	display: block;
+	padding: 2px;
+	font-size: 14px;
+	font-weight: bold;
+	text-transform: capitalize;
+	padding-left: 5px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+}
+.reviewPoint moviename:before{content:'Movie :  ';font-weight: normal;margin-right:30px;}
+.reviewPoint director:before{content:'Director :  ';font-weight: normal;margin-right:17px;}
+.reviewPoint heroname:before{content:'Hero :  ';font-weight: normal;margin-right:40px;}
+.reviewPoint herionename:before{content:'Herione : ';font-weight: normal;margin-right:20px;}
+.reviewPoint music:before{content:'Music : ';font-weight: normal;margin-right:31px;}
+.reviewPoint releasedate:before{content:'Release : ';font-weight: normal;margin-right:21px;}
+.reviewPoint producername:before{content:'Producer : ';font-weight: normal;margin-right:13px;}
+.reviewPoint moviename{margin-top:10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+        <title>Possibilidades</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="libs/jquery.min.js"></script> 
+        <script src="libs/jquery.1.8.1.min.js"></script>
+	<script src="libs/jquery-ui.min.js"></script>
+	<script src="libs/touch_punch.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<script src="js/main.js"></script>	
+	<style>
+	@media (min-width: 650px) and (max-width: 800px) {
+		body{
+			-webkit-transform:rotate(90deg);
+		}
+	}
+	</style>
+	<script>
+	$(document).ready(function(){
+		$(window).bind("orientationchange", function(){
+			var orientation = window.orientation;    
+			//alert(orientation)
+			var new_orientation = (orientation) ? 0 : 90;
+			//alert(new_orientation)
+			if (new_orientation==180) {
+				new_orientation=90;
+			}			
+			$('body').css({
+			    "-webkit-transform": "rotate(" + new_orientation + "deg)"
+			});
+		});		
+	});
+	</script>	
+    </head>
+    <body>
+	<div id="jpObject">
+		<div id="jpFx">Possibilidades<a href="javascript:void(0);" title="" class="creditWrapper rt">&copy;</a></div>		
+		<div class="container">
+			<div class="pageone pagenav">
+				<div class="titleBg pageoneTitle"> 1. Escolha seu personagem:</div>
+				<div class="pageoneactivitycontainer">
+					<div class="framePhoto db"><img src="./images/members/1.png" alt=""  align="middle"/></div>
+					<div class="framePhoto db"><img src="./images/members/2.png" alt=""  align="middle"/></div>
+					<div class="framePhoto db"><img src="./images/members/3.png" alt=""  align="middle"/></div>
+					<div class="framePhoto db"><img src="./images/members/4.png" alt=""  align="middle"/></div>
+					<div class="framePhoto db"><img src="./images/members/5.png" alt=""  align="middle"/></div>
+					<div class="framePhoto db"><img src="./images/members/6.png" alt=""  align="middle"/></div>
+					<div class="framePhoto db"><img src="./images/members/7.png" alt=""  align="middle"/></div>
+					<div class="framePhoto db"><img src="./images/members/8.png" alt=""  align="middle"/></div>
+				</div>
+			</div>
+			<div class="pagetwo pagenav">
+				<div class="titleBg pagetwoTitle"> 2. Escolha ate 7 itens de vestu&#225;rio.</div>
+				<div class="pagetwoWrapper">
+					<div class="pagetwomaterial">
+						<table cellpading="0" cellspacing="0" id="boymaterials" >
+							<tr>
+								<td>
+									<img id="drag1" src="./images/material/b_dress_4.png" alt="b_dress_4" width="50" class="drp" />
+									<img id="drag2" src="./images/material/b_cap_4.png" alt="b_cap_4" width="55" class="drp" />
+									<img id="drag3" src="./images/material/b_dress_3.png" alt="b_dress_3" width="50" class="drp" />
+								</td>
+								<td>
+									<img id="drag4" src="./images/material/b_cap_1.png" alt="b_cap_1" width="55" class="drp" />
+									<img id="drag5" src="./images/material/b_cap_2.png" alt="b_cap_2" width="55" class="drp" />
+									<img id="drag6" src="./images/material/b_cap_3.png" alt="b_cap_3" width="55" class="drp" />
+									<img id="drag7" src="./images/material/b_shoe_4.png" alt="b_shoe_4" width="55" class="drp" />
+									<img id="drag8" src="./images/material/b_cap_8.png" alt="b_cap_8" width="55" class="drp" />
+									<img id="drag9" src="./images/material/b_shoe_8.png" alt="b_shoe_8" width="50" class="drp" />
+								</td>
+								<td>									
+									<img id="drag10" src="./images/material/b_shoe_1.png" alt="b_shoe_1" width="50" class="drp" />
+									<img id="drag11" src="./images/material/b_dress_1.png" alt="b_dress_1" width="50" class="drp" />
+									<img id="drag12" src="./images/material/b_dress_8.png" alt="b_dress_8" width="50" class="drp" />
+								</td>
+								<td>
+									<img id="drag13" src="./images/material/b_dress_2.png" alt="b_dress_2" width="40" class="drp" />
+									<img id="drag14" src="./images/material/b_shoe_3.png" alt="b_shoe_3" width="60"class="drp" />
+									<img id="drag15" src="./images/material/b_cap_5.png" alt="b_cap_5" width="60" class="drp" />
+									<img id="drag16" src="./images/material/b_shoe_5.png" alt="b_shoe_5" width="60"class="drp" />
+									<img id="drag17" src="./images/material/b_cap_7.png" alt="b_cap_7" width="60" class="drp" />
+								</td>
+								<td>									
+									<img id="drag18" src="./images/material/b_shoe_2.png" alt="b_shoe_2" width="50"class="drp" />
+									<img id="drag19" src="./images/material/b_dress_6.png" alt="b_dress_6" width="40" class="drp" />
+									<img id="drag20" src="./images/material/b_cap_6.png" alt="b_cap_6" width="60" class="drp" />
+									<img id="drag21" src="./images/material/b_shoe_7.png" alt="b_shoe_7" width="50"class="drp" />
+								</td>
+								<td>									
+									<img id="drag22" src="./images/material/b_dress_5.png" alt="b_dress_5" width="50" class="drp" />
+									<img id="drag23" src="./images/material/b_shoe_6.png" alt="b_shoe_6" width="60" class="drp" />
+									<img id="drag24" src="./images/material/b_dress_7.png" alt="b_dress_7" width="50" class="drp" />
+								</td>
+							</tr>
+						</table>
+						<table cellpading="0" cellspacing="0" id="girlmaterials">
+							<tr>
+								<td>
+									<img id="drag25" src="./images/material/g_dress_1.png" alt="g_dress_1" width="50" class="drp" />
+									<img id="drag26" src="./images/material/g_cap_1.png" alt="g_cap_1" width="50" class="drp" />
+									<img id="drag27" src="./images/material/g_dress_8.png" alt="g_dress_8" width="50" class="drp" />
+								</td>
+								<td>
+									<img id="drag28" src="./images/material/g_shoe_1.png" alt="g_shoe_1" width="55" class="drp" />									
+									<img id="drag29" src="./images/material/g_dress_7.png" alt="g_dress_7" width="50" class="drp" />
+									<img id="drag30" src="./images/material/g_shoe_2.png" alt="g_shoe_2" width="55"class="drp" />
+									<img id="drag31" src="./images/material/g_cap_5.png" alt="g_cap_5" width="55"class="drp" />
+								</td>
+								<td>	
+									<img id="drag32" src="./images/material/g_dress_6.png" alt="g_dress_6" width="50" class="drp" />
+									<img id="drag33" src="./images/material/g_cap_6.png" alt="g_cap_6" width="60" class="drp" />
+									<img id="drag34" src="./images/material/g_shoe_3.png" alt="g_shoe_3" width="60" class="drp" />
+									<img id="drag35" src="./images/material/g_cap_3.png" alt="g_cap_3" width="60" class="drp" />
+									<img id="drag36" src="./images/material/g_shoe_4.png" alt="g_shoe_4" width="60" class="drp" />
+								</td>
+								<td>
+									<img id="drag37" src="./images/material/g_shoe_8.png" alt="g_shoe_8" width="60" class="drp" />
+									<img id="drag38" src="./images/material/g_shoe_7.png" alt="g_shoe_7" width="60"class="drp" />
+									<img id="drag39" src="./images/material/g_cap_7.png" alt="g_cap_7" width="60" class="drp" />
+									<img id="drag40" src="./images/material/g_dress_2.png" alt="g_dress_2" width="60"class="drp" />									
+								</td>
+								<td>									
+									<img id="drag41" src="./images/material/g_dress_5.png" alt="g_dress_5" width="55"class="drp" />
+									<img id="drag42" src="./images/material/g_cap_2.png" alt="g_cap_2" width="55" class="drp" />
+									<img id="drag43" src="./images/material/g_shoe_5.png" alt="g_shoe_5" width="55" class="drp" />
+									<img id="drag44" src="./images/material/g_cap_4.png" alt="g_cap_4" width="55" class="drp" />
+									<img id="drag45" src="./images/material/g_cap_8.png" alt="g_cap_8" width="55"class="drp" />
+								</td>
+								<td>									
+									<img id="drag46" src="./images/material/g_dress_4.png" alt="g_dress_4" width="50" class="drp" />									
+									<img id="drag47" src="./images/material/g_dress_3.png" alt="g_dress_3" width="50" class="drp" />
+									<img id="drag48" src="./images/material/g_shoe_6.png" alt="g_shoe_6" width="55" class="drp" />
+								</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<div class="pagetwoWrapper dragmatwrap">
+					<div class="selectObject">
+						<table cellpadding="0" cellspacing="0" width="100%">
+							<tr>
+								<td align="left">
+									<p class="thumbText">Arraste aqui.</p>
+								</td>
+								<td align="right">
+									<div class="thumImg">
+										<img src="./images/material/b_1.png" alt="" />	
+									</div>
+								</td>
+							</tr>
+						</table>
+					</div>
+					<div class="pagetwomaterial dragmaterial" id="pagetwodrag" >
+						
+					</div>
+				</div>				
+			</div>
+			<div class="pagethree pagenav">
+				<div class="titleBg pagethreeTitle"> 3. Vista de todas as diferentes formas poss&#237;veis com os itens que voc&#234; escolheu.</div>
+				<div class="pagetwoWrapper pagethreeWrap">
+					<div class="pagetwomaterial pagethreedragmaterial">
+						<div class="pagethreeDropeditem" id="pagethreeImagearea"></div>
+						<a href="javascript:void(0);" title="Adicionar" class="db pagethreemoveright"><span>Adicionar</span></a>
+						<div id="avatar_image">
+						<div class="avatar_image">
+							<div id="header_section">
+								<div class="cap_img dropped_image ">
+									<img src="" alt="" style="height: 0;width: 0;border-style:none;" width="70" class="objectFitmat db" id="img_cap"/>
+								</div>
+							</div>
+							<div id="body_section">
+								<div class="dress_img dropped_image ">
+									<img src="" alt="" style="height: 0;width: 0;border-style:none;" width="70" class="objectFitmat db" id="img_dress" />
+								</div>
+							</div>
+							<div id="footer_section">
+								<div class="shoe_img dropped_image ">
+									<img src="" alt="" style="height: 0;width: 0;border-style:none;" width="70" class="objectFitmat db" id="img_shoe" />
+								</div>
+							</div>
+							
+						</div>
+						</div>
+					</div>
+					<a href="javascript:void(0);" title="" class="ajustBut db"></a>
+				</div>
+				<div class="pagetwoWrapper pagethreeshowsection">
+					<div class="pagetwomaterial pagethreeresult"></div>					
+				</div>
+				
+			</div>
+			<div class="pagefour pagenav">
+				<div class="titleBg pagefourTitle"> &#193;rvore de possibilidades.</div>
+				<div class="pagetwoWrapper pagefourWrap">
+					<div class="pagetwomaterial pagefourdragmaterial">
+						<div class="pagethreeDropeditem" id="pagefourImagearea"></div>
+						<a href="javascript:void(0);" title="Adicionar" class="db pagefourmoveright"><span>Adicionar</span></a>
+						<div class="four_avatar_image"></div>						
+					</div>
+					<a href="javascript:void(0);" title="" class="voltarbut"></a>
+				</div>
+				<div class="pagetwoWrapper pagefourshowsection">
+					<div class="pagetwomaterial pagefourresult">
+   
+    
+     
+    <div class="treecontainer">
+
+    <div class="treeRt">
+        <div class="divHead"><div class="main"></div></div>
+        <div class="divCapline"></div>
+        <div class="divCap"></div>
+        <div class="divCap2"></div>
+        <div class="divDress2"></div>
+        <div class="divDress"></div>
+        <div class="divShoesline"></div>
+        <div class="divShoes"></div>
+        <div class="divComb"></div>
+    </div>
+	</div>
+
+					</div>					
+				</div>
+				
+			</div>
+			<input type="hidden" name="imageid" id="imageid" />
+			<input type="hidden" name="materialarr" id="materialarr" />
+			<!--<div class='activityContainer'>
+				
+			</div>-->
+			<a href="javascript:void(0);" title="Voltar" class="leftArrowinactive">
+				<span>Voltar</span>
+			</a>
+			<a href="javascript:void(0);" title="Avan&#231;ar" class="rightArrowinactive">
+				<span>Avan&#231;ar</span>
+			</a>
+			<a href="javascript:void(0);" title="" class="resetButtoninactive"></a>
+		</div>
+	</div>
+	<div class="popupoverlay"></div>
+	<div id="popUpvalid" class="popupWrapper">
+		<div class="popupheader">
+			<span id="poptitleText"></span>
+			<a href="javascript:void(0);" title="Fechar" class="popupclose">x</a>
+		</div>
+		<div class="clear"></div>
+		<div class="popupContent">
+			<!--<table cellpadding="0" cellspacing="0" width="100%" class="popupContentSection">
+				<tr>
+					<td>-->
+						<p id="popContentTxt" class="popContentTxt"></p>
+					<!--</td>
+				</tr>
+				<tr>-->
+					<div class="popupButton">
+						<a href="javascript:void(0);" title="OK" class="popupokbut popupclose"></a>
+					</div>
+				<!--</tr>
+			</table>-->
+		</div>
+	</div>
+	<div id="popUpvalid_new" class="popupWrapper_new">
+		<div class="popupheader_new">
+			<span id="poptitleText_new"></span>
+			<a href="javascript:void(0);" title="" class="popupclose">x</a>
+		</div>
+		<div class="clear"></div>
+		<div class="popupContent_new">
+			<table cellpadding="0" cellspacing="0" width="100%" height="160" class="popupContentSection_new">
+				<tr>
+					<td>
+						<p id="popContentTxt_new" class="popContentTxt_new"></p>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+    </body>
+</html>

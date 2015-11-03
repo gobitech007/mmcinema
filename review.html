@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>MM</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/agency.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>    
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body id="page-top" class="index"  ng-app="myhome">
+<header></header>
+<section class="paddIngZero reviewWrap" style="margin-top:115px">
+	 <div class="container">
+		<div class=" col-sm-6 col-md-8 col-xs-6 nopaddingleft listWrappadding" ng-controller="customersCtrl">
+			<div class="combine">			
+				<div class="lispageCombine"  ng-repeat="x in names.slice(0, 1)">					 
+					 <div class="col-md-12 nopaddingleft">
+						<h4>Movie Review - {{ x.name }}</h4>
+						<img src="{{ x.img }}" class="img-responsive col-md-6 nopaddingleft" alt="" style="margin-bottom:5px;">	
+						<div class="col-md-6 nopaddingleft paddingbottom reviewPoint">
+							<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+							<span class="reviewScore">2.5</span>
+							<moviename>Gobinath</moviename>
+							<director>Gobi</director>
+							<heroname>Gobi</heroname>
+							<herionename>New</herionename>
+							<music>Gobi</music>
+							<releasedate>10-sep-2015</releasedate>
+							<producername>Gobinath</producername>
+						</div>
+						{{ x.desc }}						 
+					 </div> 
+				 </div>
+				<a href="http://twitter.com/home?status=" title="Share on Twitter" target="_blank" class="btn btn-twitter socialIcon"><i class="fa fa-twitter"></i> Twitter</a>
+				<a href="https://www.facebook.com/sharer/sharer.php?u=" title="Share on Facebook" target="_blank" class="btn btn-facebook socialIcon"><i class="fa fa-facebook"></i> Facebook</a>
+				<a href="https://plus.google.com/share?url=" title="Share on Google+" target="_blank" class="btn btn-googleplus socialIcon"><i class="fa fa-google-plus"></i> Google+</a>
+			 </div>			 
+		</div>
+		<div class=" col-sm-6 col-md-4 col-xs-6  nopaddingright ">			
+			<aside id="review" class="col-md-12 nopadding">
+				<h4>Review</h4>
+				<div class="trailler reviewPortion">
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+				</div>
+			</aside>
+			<aside id="addpost" class="col-md-12 nopadding paddingbottom">
+				<h4>Addpost</h4>
+				<img src="img/govt-jobs-latest.jpg" alt="" class="img-responsive"/>
+			</aside>			
+			<aside id="addpost" class="col-md-12 nopadding paddingbottom">
+				<h4>Addpost</h4>
+				<img src="img/govt-jobs-latest.jpg" alt="" class="img-responsive"/>
+			</aside>
+		</div>
+	 </div>
+</section>
+<footer></footer>    
+<script src="js/jquery.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/common.js"></script>
+<script>	
+$(function(){$('header').load('header.html');$('footer').load('footer.html');});
+</script>
+</body>
+</html>
