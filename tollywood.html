@@ -34,11 +34,11 @@
 <header></header>
 <section class="paddIngZero" style="margin-top:115px">
 	 <div class="container">
-		<div class=" col-sm-6 col-md-8 col-xs-6 nopaddingleft listWrappadding" ng-controller="kollywood">
+		<div class=" col-sm-6 col-md-8 col-xs-6 nopaddingleft listWrappadding" ng-controller="tollywood">
 			<div class="combine"   >			
 				<div class="lispageCombine"  ng-repeat="x in names.slice(0, 15)">
 					 <div class="leftHome pull-left">
-						<div class="latHm"  ng-href="details.html?q=dt&id={{x.hid}}&ty=kw" ng-click="loc($event)">
+						<div class="latHm"  ng-href="details.html?q=dt&id={{x.bid}}&ty=tw" ng-click="loc($event)">
 							<div class="repeatNew-hm">
 								<img src="uploads/{{ path }}/thumb_2/{{ x.img_path }}" class="img-responsive" alt="">
 								<span class="title">{{ x.name }}</span>
@@ -54,14 +54,14 @@
 		</div>
 		<div class=" col-sm-6 col-md-4 col-xs-6  nopaddingright ">
 			<script src="http://caitp.github.io/ng-media/ng-media.js"></script>
-			<aside id="trailler" class="col-md-12 nopadding" ng-controller="kollywoodtrailer">
+			<aside id="trailler" class="col-md-12 nopadding" ng-controller="tollywoodtrailer">
 				<h4>Trailler</h4>
 				<div class="trailler">
 					<div class="col-md-6 nopaddingleft" ng-repeat="x in names.slice(0, 3)" ng-click="ifa($event)">
-						<img src="uploads/{{ path }}/thumb_2/{{ x.img_path }}" alt=""  data-toggle="modal" data-target="#myModal{{x.hid}}" class="img-responsive" />
+						<img src="uploads/{{ path }}/thumb_2/{{ x.img_path }}" alt=""  data-toggle="modal" data-target="#myModal{{x.tid}}" class="img-responsive" />
 						<span data-href="{{x.video_path}}" class="ng-hidden iframevideo"></span>  
 						<!-- Modal -->
-						<div class="modal fade" id="myModal{{x.hid}}" role="dialog" >
+						<div class="modal fade" id="myModal{{x.tid}}" role="dialog" >
 						  <div class="modal-dialog" role="document">
 							<div class="modal-content">
 							  <div class="modal-header">
@@ -69,37 +69,22 @@
 								<h4 class="modal-title" id="myModalLabel">{{x.name}}</h4>
 							  </div>
 							  <div class="modal-body">
-								<iframe width="100%" height="400" src="{{getvideourl(x.video_path)}}" frameborder="0" allowfullscreen></iframe>
+								<iframe width="100%" height="400" src="{{gettwvideourl(x.video_path)}}" frameborder="0" allowfullscreen></iframe>
 							  </div>
 							</div>
 						  </div>
 						</div>
 					</div>
-					<!--<div class="col-md-6 nopaddingleft"><img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/></div>
-					<div class="col-md-6 nopaddingleft"><img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/></div>
-					<div class="col-md-6 nopaddingleft"><img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/></div>-->
 				</div>
 			</aside>
 			<aside id="review" class="col-md-12 nopadding">
 				<h4>Review</h4>
-				<div class="trailler reviewPortion" ng-controller="kollywood">
-					<div class="col-md-6 nopaddingleft" ng-repeat="x in names.slice(0, 4)" ng-if="x.review != ''" ng-href="details.html?q=dt&id={{x.hid}}&ty=kw" ng-click="loc($event)">
+				<div class="trailler reviewPortion" ng-controller="tollywood">
+					<div class="col-md-6 nopaddingleft" ng-repeat="x in names.slice(0, 4)" ng-if="x.review != ''" ng-href="details.html?q=dt&id={{x.tid}}&ty=tw" ng-click="loc($event)">
 						<!--<span class="reviewStar" data-review="{{x.review}}"><i class="fa fa-star" ng-repeat="y in getNumber(x.review) track by $index"></i></span>-->
 						<span class="reviewStar" data-review="{{x.review}}"></span>
 						<img src="uploads/{{ path }}/thumb_2/{{ x.img_path }}" alt="" class="img-responsive"/>
 					</div>
-					<!--<div class="col-md-6 nopaddingleft">
-						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
-						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
-					</div>
-					<div class="col-md-6 nopaddingleft">
-						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
-						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
-					</div>
-					<div class="col-md-6 nopaddingleft">
-						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
-						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
-					</div>-->
 				</div>
 			</aside>
 			<aside id="addpost" class="col-md-12 nopadding paddingbottom">

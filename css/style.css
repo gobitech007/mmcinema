@@ -95,8 +95,10 @@ header {
 }
 .hmScrn{
 	text-align:left;
-	padding-bottom:20px;
+	padding-bottom:30px;
+	border-bottom:1px solid #d9d9d9;
 }
+
 .moreDetails{
 	text-align:right;	
 	float:right;
@@ -300,7 +302,13 @@ aside:first-of-type{
 .reviewPoint releasedate:before{content:'Release : ';font-weight: normal;margin-right:21px;}
 .reviewPoint producername:before{content:'Producer : ';font-weight: normal;margin-right:13px;}
 .reviewPoint moviename{margin-top:10px;}
-
+.descencrypt{
+	text-overflow: ellipsis;
+    display: inline-block;
+    white-space: nowrap;
+    width: 400px;
+    overflow: hidden;
+}
 
 
 

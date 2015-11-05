@@ -109,8 +109,7 @@ include 'create_thumbs.php';
 			}else if($('.alert').hasClass('warning')){
 				$('.alert').removeClass('hidden').addClass('alert-warning').fadeOut(4000);
 			}
-			
-		$('#video').parent('div').hide();
+			$('#video').parent('div').hide();
 		$('.checkbox input').click(function(){
 			if($(this).is(':checked')){
 				$('#video').parent('div').show();
@@ -161,10 +160,10 @@ if ($uploadOk == 0) {
 	  echo '';
     }
 }
-/*
+
 //Video PATHINFO_EXTENSION
 $videoname='';
-$allowedExts = array("jpg", "jpeg", "gif", "png", "mp3", "mp4", "wma");
+/*$allowedExts = array("jpg", "jpeg", "gif", "png", "mp3", "mp4", "wma");
 $extension = pathinfo($_FILES['video']['name'], PATHINFO_EXTENSION);
 //print_r($_FILES["video"]["type"]);
 if ((($_FILES["video"]["type"] == "video/mp4")
@@ -188,7 +187,7 @@ if ((($_FILES["video"]["type"] == "video/mp4")
    // echo "Size: " . ($_FILES["video"]["size"] / 1024) . " Kb<br />";
     //echo "Temp file: " . $_FILES["video"]["tmp_name"] . "<br />";
 
-    if (file_exists("uploads/bw/video/" . $_FILES["video"]["name"]))
+    if (file_exists("uploads/kw/video/" . $_FILES["video"]["name"]))
       {
       //echo $_FILES["video"]["name"] . " already exists. ";
 	  echo '';
@@ -196,7 +195,7 @@ if ((($_FILES["video"]["type"] == "video/mp4")
     else
       {
       move_uploaded_file($_FILES["video"]["tmp_name"],
-      "uploads/bw/video/" . $_FILES["video"]["name"]);
+      "uploads/kw/video/" . $_FILES["video"]["name"]);
 	  $videoname = $_FILES["video"]["name"];
       //echo "Stored in: " . "uploads/hw/video/" . $_FILES["video"]["name"];
 	  echo '';
@@ -207,9 +206,9 @@ else
   {
   echo "Invalid file";
   }*/
-	$title = $_POST['title'];
-	$name = $_POST['name'];
-	$message = $_POST['message'];
+	$title = mysql_escape_string ($_POST['title']);
+	$name = mysql_escape_string ($_POST['name']);
+	$message = mysql_escape_string($_POST['message']);
 	$review = $_POST['review'];
 	$director = $_POST['director'];
 	$music = $_POST['music'];
@@ -218,7 +217,6 @@ else
 	$screen = $_POST['screen'];
 	$story = $_POST['story'];
 	$videoname= ($_POST['video']=='')?'':$_POST['video'];
-
 	$sql = "INSERT INTO bollywood (title, name, director,music,description,img_path,video_path,producer,cast,screen,story,review)
 VALUES ('".$title."','".$name."','".$director."','".$music."','".$message."','".$imagename."','".$videoname."','".$producer."','".$cast."','".$screen."','".$story."','".$review."')";
 $result = mysql_query($sql);     

@@ -57,6 +57,51 @@ app.controller('kollywood', function($scope, $http,$sce) {
 		return new Array(parseInt(num, 10));   
 	}
 });
+app.controller('bollywood', function($scope, $http,$sce) {
+	//var urls = [];
+   // urls.push({domain: $sce.trustAsResourceUrl("http://angularjs.org")});
+    $http.get("function.php?q=bw")
+    .success(function (response) {
+		//console.log(response);
+		$scope.names = response.data;
+		$scope.path = response.path;
+		
+		//$scope.urls = urls;
+	});
+	$scope.getvideourl = function(url){
+		return $sce.trustAsResourceUrl(url);
+	}
+	$scope.loc = function(item){
+		var it=item.currentTarget;
+		location.href=$(it).attr('href');
+	}
+	$scope.getNumber = function(num) {	
+		return new Array(parseInt(num, 10));   
+	}
+});
+app.controller('tollywood', function($scope, $http,$sce) {
+	//var urls = [];
+   // urls.push({domain: $sce.trustAsResourceUrl("http://angularjs.org")});
+    $http.get("function.php?q=tw")
+    .success(function (response) {
+		//console.log(response);
+		$scope.names = response.data;
+		$scope.path = response.path;
+		
+		//$scope.urls = urls;
+	});
+	$scope.getvideourl = function(url){
+		return $sce.trustAsResourceUrl(url);
+	}
+	$scope.loc = function(item){
+		var it=item.currentTarget;
+		location.href=$(it).attr('href');
+	}
+	$scope.getNumber = function(num) {	
+		return new Array(parseInt(num, 10));   
+	}
+});
+
 
 app.controller('details', function($scope, $http) {
 	//console.log(getUrlParameter('ty'));	
@@ -76,6 +121,47 @@ app.controller('kollywoodtrailer', function($scope, $http,$sce) {
 		$scope.path = response.path;
 	});
 	$scope.getvideourl = function(url){
+		return $sce.trustAsResourceUrl(url);
+	}
+	$scope.loc = function(item){
+		var it=item.currentTarget;
+		location.href=$(it).attr('href');
+	}
+	 $scope.videoSources = [];
+	$scope.loadVideos = function() {
+            $scope.videoSources.push('http://www.w3schools.com/html/mov_bbb.mp4');
+            $scope.videoSources.push('http://www.w3schools.com/html/mov_bbb.webm');
+        };
+});
+
+app.controller('bollywoodtrailer', function($scope, $http,$sce) {
+    $http.get("function.php?q=video&ty=bw")
+    .success(function (response) {
+		//console.log(response);
+		$scope.names = response.data;
+		$scope.path = response.path;
+	});
+	$scope.getbwvideourl = function(url){
+		return $sce.trustAsResourceUrl(url);
+	}
+	$scope.loc = function(item){
+		var it=item.currentTarget;
+		location.href=$(it).attr('href');
+	}
+	 $scope.videoSources = [];
+	$scope.loadVideos = function() {
+            $scope.videoSources.push('http://www.w3schools.com/html/mov_bbb.mp4');
+            $scope.videoSources.push('http://www.w3schools.com/html/mov_bbb.webm');
+        };
+});
+app.controller('tollywoodtrailer', function($scope, $http,$sce) {
+    $http.get("function.php?q=video&ty=tw")
+    .success(function (response) {
+		//console.log(response);
+		$scope.names = response.data;
+		$scope.path = response.path;
+	});
+	$scope.gettwvideourl = function(url){
 		return $sce.trustAsResourceUrl(url);
 	}
 	$scope.loc = function(item){

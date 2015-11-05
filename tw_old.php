@@ -31,7 +31,7 @@ include 'create_thumbs.php';
 	<header id="header"></header>
 	<section class="paddIngZero" style="margin-top:80px">
         <div class="container">
-		<h1 class="text-success bg-sucess well well-sm text-center">Kollywood</h1>		
+		<h1 class="text-success bg-sucess well well-sm text-center">Tollywood</h1>		
 		<form id="kollywood" action="" method="post" enctype="multipart/form-data">
 			<div id="suc" class="alert alert-success hidden"></div>
 			<div class="col-lg-6 col-md-6">
@@ -109,7 +109,8 @@ include 'create_thumbs.php';
 			}else if($('.alert').hasClass('warning')){
 				$('.alert').removeClass('hidden').addClass('alert-warning').fadeOut(4000);
 			}
-			$('#video').parent('div').hide();
+			
+		$('#video').parent('div').hide();
 		$('.checkbox input').click(function(){
 			if($(this).is(':checked')){
 				$('#video').parent('div').show();
@@ -123,7 +124,7 @@ include 'create_thumbs.php';
 //print_r($_POST);
 if(isset($_POST['submitform'])){	
 	
-	$target_dir = "uploads/kw/original/";
+	$target_dir = "uploads/tw/original/";
 	$target_file = $target_dir . basename($_FILES["image"]["name"]);
 	$uploadOk = 1;
 	$imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);   
@@ -151,19 +152,19 @@ if ($uploadOk == 0) {
         //echo "The file ". basename( $_FILES["image"]["name"]). " has been uploaded.";
 		echo '';
 		$imagename = basename( $_FILES["image"]["name"]);
-		createThumbs("uploads/kw/original/","uploads/hw/thumb/",300,'');
-		createThumbs("uploads/kw/original/","uploads/hw/thumb_2/",200,'');
-		createThumbs("uploads/kw/original/","uploads/hw/thumb_3/",170,'');
-		createThumbs("uploads/kw/original/","uploads/hw/thumb_4/",45,'');
+		createThumbs("uploads/tw/original/","uploads/tw/thumb/",300,'');
+		createThumbs("uploads/tw/original/","uploads/tw/thumb_2/",200,'');
+		createThumbs("uploads/tw/original/","uploads/tw/thumb_3/",170,'');
+		createThumbs("uploads/tw/original/","uploads/tw/thumb_4/",45,'');
     } else {
         //echo "Sorry, there was an error uploading your file.";
 	  echo '';
     }
 }
-
+/*
 //Video PATHINFO_EXTENSION
 $videoname='';
-/*$allowedExts = array("jpg", "jpeg", "gif", "png", "mp3", "mp4", "wma");
+$allowedExts = array("jpg", "jpeg", "gif", "png", "mp3", "mp4", "wma");
 $extension = pathinfo($_FILES['video']['name'], PATHINFO_EXTENSION);
 //print_r($_FILES["video"]["type"]);
 if ((($_FILES["video"]["type"] == "video/mp4")
@@ -187,7 +188,7 @@ if ((($_FILES["video"]["type"] == "video/mp4")
    // echo "Size: " . ($_FILES["video"]["size"] / 1024) . " Kb<br />";
     //echo "Temp file: " . $_FILES["video"]["tmp_name"] . "<br />";
 
-    if (file_exists("uploads/kw/video/" . $_FILES["video"]["name"]))
+    if (file_exists("uploads/tw/video/" . $_FILES["video"]["name"]))
       {
       //echo $_FILES["video"]["name"] . " already exists. ";
 	  echo '';
@@ -195,7 +196,7 @@ if ((($_FILES["video"]["type"] == "video/mp4")
     else
       {
       move_uploaded_file($_FILES["video"]["tmp_name"],
-      "uploads/kw/video/" . $_FILES["video"]["name"]);
+      "uploads/tw/video/" . $_FILES["video"]["name"]);
 	  $videoname = $_FILES["video"]["name"];
       //echo "Stored in: " . "uploads/hw/video/" . $_FILES["video"]["name"];
 	  echo '';
@@ -206,9 +207,9 @@ else
   {
   echo "Invalid file";
   }*/
-	$title = mysql_escape_string ($_POST['title']);
-	$name = mysql_escape_string ($_POST['name']);
-	$message = mysql_escape_string($_POST['message']);
+	$title = $_POST['title'];
+	$name = $_POST['name'];
+	$message = $_POST['message'];
 	$review = $_POST['review'];
 	$director = $_POST['director'];
 	$music = $_POST['music'];
@@ -217,7 +218,8 @@ else
 	$screen = $_POST['screen'];
 	$story = $_POST['story'];
 	$videoname= ($_POST['video']=='')?'':$_POST['video'];
-	$sql = "INSERT INTO hollywood (title, name, director,music,description,img_path,video_path,producer,cast,screen,story,review)
+
+	$sql = "INSERT INTO tollywood (title, name, director,music,description,img_path,video_path,producer,cast,screen,story,review)
 VALUES ('".$title."','".$name."','".$director."','".$music."','".$message."','".$imagename."','".$videoname."','".$producer."','".$cast."','".$screen."','".$story."','".$review."')";
 $result = mysql_query($sql);     
 //print_r($result);
