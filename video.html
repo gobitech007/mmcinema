@@ -18,7 +18,10 @@
     <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>    
-    <!--[if lt IE 9]>
+    <script src="js/jquery.js"></script>
+	<script src="js/angular.min.js"></script>
+	<script src="js/common.js"></script>
+	<!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
@@ -27,12 +30,13 @@
 <header></header>
 <section class="paddIngZero" style="margin-top:115px">
 	 <div class="container">
-		<div class=" col-sm-6 col-md-8 col-xs-6 nopaddingleft listWrappadding" ng-controller="customersCtrl">
+		<div class=" col-sm-6 col-md-8 col-xs-6 nopaddingleft listWrappadding" ng-controller="alltrailer">
 			<div class="combine"   >			
 				<div class="lispageCombine"  ng-repeat="x in names.slice(0, 1)">					 
 					 <div class="col-md-12 nopaddingleft">
 						<h4>{{ x.name }}</h4>
-						<img src="img/video.jpg" alt="" class="img-responsive"/>
+						<!--<img src="img/video.jpg" alt="" class="img-responsive"/>-->
+						<iframe width="100%" height="400" src="{{getbwvideourl(x.video_path)}}" frameborder="0" allowfullscreen></iframe>
 						<!-- <iframe width="100%" height="450" src="https://www.youtube.com/embed/07fBh38vvhQ" frameborder="0" allowfullscreen></iframe> -->
 						<div style="padding:10px;"></div>											 
 					 </div> 
@@ -43,12 +47,13 @@
 			 </div>
 			 <div style="padding:10px;"></div>	
 			<div class="combine">
-				<div class="trailler videotrailer">
+				<div class="trailler videotrailer" ng-controller="alltrailer">
+					<div class="col-md-6 nopaddingleft" ng-repeat="x in names.slice(1, 10)"><iframe width="100%" height="235" src="{{getbwvideourl(x.video_path)}}" frameborder="0" allowfullscreen></iframe></div> 
 					<!-- <div class="col-md-6 nopaddingleft"><iframe width="100%" height="250" src="https://www.youtube.com/embed/07fBh38vvhQ" frameborder="0" allowfullscreen></iframe></div> -->
+					<!--<div class="col-md-6 nopaddingleft"><img src="img/video.jpg" alt="" class="img-responsive"/></div> 
 					<div class="col-md-6 nopaddingleft"><img src="img/video.jpg" alt="" class="img-responsive"/></div> 
 					<div class="col-md-6 nopaddingleft"><img src="img/video.jpg" alt="" class="img-responsive"/></div> 
-					<div class="col-md-6 nopaddingleft"><img src="img/video.jpg" alt="" class="img-responsive"/></div> 
-					<div class="col-md-6 nopaddingleft"><img src="img/video.jpg" alt="" class="img-responsive"/></div> 
+					<div class="col-md-6 nopaddingleft"><img src="img/video.jpg" alt="" class="img-responsive"/></div> -->
 				</div>
 			</div>	
 		</div>
@@ -65,9 +70,7 @@
 	 </div>
 </section>
 <footer></footer>    
-<script src="js/jquery.js"></script>
-<script src="js/angular.min.js"></script>
-<script src="js/common.js"></script>
+
 <script>	
 $(function(){$('header').load('header.html');$('footer').load('footer.html');});
 </script>

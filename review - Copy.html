@@ -61,10 +61,46 @@
 			<aside id="review" class="col-md-12 nopadding">
 				<h4>Review</h4>
 				<div class="trailler reviewPortion" ng-controller="reviewall">
-					<div class="col-md-6 nopaddingleft" ng-repeat="x in names.slice(1, 10)">
+					<div class="col-md-6 nopaddingleft" ng-repeat="x in names.slice(0, 10)">
 						<span class="reviewStar" data-review={{x.review}}></span>
 						<img src="uploads/kw/thumb/{{x.img_path}}" alt="" class="img-responsive"/>
-					</div>					
+					</div>
+					<!--<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>
+					<div class="col-md-6 nopaddingleft">
+						<span class="reviewStar"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-half-o"></i><i class="fa fa-star-o"></i><i class="fa fa-star-o"></i></span>
+						<img src="img/Bachalpseeflowers.jpg" alt="" class="img-responsive"/>
+					</div>-->
 				</div>
 			</aside>
 			<aside id="addpost" class="col-md-12 nopadding paddingbottom">
@@ -78,7 +114,8 @@
 		</div>
 	 </div>
 </section>
-<footer></footer>
+<footer></footer>    
+
 <script>	
 $(function(){$('header').load('header.html');$('footer').load('footer.html');});
 </script>

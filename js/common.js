@@ -174,6 +174,38 @@ app.controller('tollywoodtrailer', function($scope, $http,$sce) {
             $scope.videoSources.push('http://www.w3schools.com/html/mov_bbb.webm');
         };
 });
+app.controller('alltrailer', function($scope, $http,$sce) {
+    $http.get("function.php?q=allt&ty=kw")
+    .success(function (response) {
+		console.log(response);
+		$scope.names = response.data;
+		//$scope.path = response.path;
+	});
+	$scope.gettwvideourl = function(url){
+		return $sce.trustAsResourceUrl(url);
+	}
+	$scope.loc = function(item){
+		var it=item.currentTarget;
+		location.href=$(it).attr('href');
+	}
+	 
+});
+app.controller('reviewall', function($scope, $http,$sce) {
+    $http.get("function.php?q=rew&ty=kw")
+    .success(function (response) {
+		//console.log(response);
+		$scope.names = response.data;
+		//$scope.path = response.path;
+	});
+	$scope.gettwvideourl = function(url){
+		return $sce.trustAsResourceUrl(url);
+	}
+	$scope.loc = function(item){
+		var it=item.currentTarget;
+		location.href=$(it).attr('href');
+	}
+	 
+});
 
 
 var sharedModule=angular.module('shared',[]);
@@ -188,6 +220,14 @@ sharedModule.controller('commonCtrl',['$scope',function($scope, $location) {
 }]);
 
 /*******************List Page*******************/
+function toggleVideo(state) {
+    // if state == 'hide', hide. Else: show video
+    var div = document.getElementById("popupVid");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+    div.style.display = state == 'hide' ? 'none' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+}
 $(function(){
 	$(window).load(function(){
 	var fs='<i class="fa fa-star"></i>';
@@ -207,5 +247,9 @@ $(function(){
 			}
 	});
 	},500);
+	});
+	$('.close').on('click',function(){
+		var ifr=$(this).parents('.modal-content').find('iframe');
+		console.log(ifr);
 	});
 });

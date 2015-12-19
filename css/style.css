@@ -273,6 +273,10 @@ aside:first-of-type{
 }
 .reviewScore:before{
 		content:' - ';
+		position: relative;
+		top: -2px;
+		font-size: 16px;
+		font-weight: bold;
 }
 .reviewScore:after{
 		content:' / 5';
@@ -294,13 +298,13 @@ aside:first-of-type{
 	overflow: hidden;
 	white-space: nowrap;
 }
-.reviewPoint moviename:before{content:'Movie :  ';font-weight: normal;margin-right:30px;}
+.reviewPoint moviename:before{content:'Movie :  ';font-weight: normal;margin-right:29px;}
 .reviewPoint director:before{content:'Director :  ';font-weight: normal;margin-right:17px;}
-.reviewPoint heroname:before{content:'Hero :  ';font-weight: normal;margin-right:40px;}
+.reviewPoint heroname:before{content:'Cast :  ';font-weight: normal;margin-right:36px;}
 .reviewPoint herionename:before{content:'Herione : ';font-weight: normal;margin-right:20px;}
-.reviewPoint music:before{content:'Music : ';font-weight: normal;margin-right:31px;}
+.reviewPoint music:before{content:'Music : ';font-weight: normal;margin-right:30px;}
 .reviewPoint releasedate:before{content:'Release : ';font-weight: normal;margin-right:21px;}
-.reviewPoint producername:before{content:'Producer : ';font-weight: normal;margin-right:13px;}
+.reviewPoint producername:before{content:'Producer : ';font-weight: normal;margin-right:10px;}
 .reviewPoint moviename{margin-top:10px;}
 .descencrypt{
 	text-overflow: ellipsis;

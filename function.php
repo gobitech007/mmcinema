@@ -14,6 +14,10 @@ if($q=="kw"){
 //	detailrelated($_REQUEST['id'],$_REQUEST['ty']);
 }else if($q=="video"){
 		videotrialer($_REQUEST['ty']);
+}else if($q=="allt"){
+	alltrailer();
+}else if($q=="rew"){
+	reviewall();
 }
 function kollywood(){	
 	$inf = array();
@@ -158,6 +162,54 @@ function videotrialer($ty){
 		}
 		echo json_encode($result);
 	
+}
+function alltrailer(){
+	$inf = array();
+	$check = mysql_query("SELECT * FROM hollywood ORDER BY hid DESC") or die(mysql_error());	
+		//$arr = mysql_fetch_array($check);
+        while ($info = mysql_fetch_assoc($check)) {					
+			//array_push($inf,$info['hid'],$info['title'],$info['name'],$info['director'],$info['music'],$info['description'],$info['producer'],$info['cast'],$info['screen'],$info['story'],$info['review'],$info['reg_date'],$info['img_path'],$info['video_path']);
+			//array_push($inf,$info);
+			if($info['video_path']!=""){
+				array_push($inf,$info);
+			}
+		}		
+		
+		if(sizeof($inf)<=0){
+				$result['result'] ="Failure";
+				$result['message'] ="No record";
+				$result['data']= '';
+		}else{
+				$result['result'] ="Success";
+				$result['message'] ="Successfully get the kollywood record";
+				$result['data']= $inf;				
+				//$result['path']=$ty;
+		}
+		echo json_encode($result);
+}
+function reviewall(){
+	$inf = array();
+	$check = mysql_query("SELECT * FROM hollywood ORDER BY hid DESC") or die(mysql_error());	
+		//$arr = mysql_fetch_array($check);
+        while ($info = mysql_fetch_assoc($check)) {					
+			//array_push($inf,$info['hid'],$info['title'],$info['name'],$info['director'],$info['music'],$info['description'],$info['producer'],$info['cast'],$info['screen'],$info['story'],$info['review'],$info['reg_date'],$info['img_path'],$info['video_path']);
+			//array_push($inf,$info);
+			if($info['review']!=""){
+				array_push($inf,$info);
+			}
+		}		
+		
+		if(sizeof($inf)<=0){
+				$result['result'] ="Failure";
+				$result['message'] ="No record";
+				$result['data']= '';
+		}else{
+				$result['result'] ="Success";
+				$result['message'] ="Successfully get the Review record";
+				$result['data']= $inf;				
+				//$result['path']=$ty;
+		}
+		echo json_encode($result);
 }
 //detailrelated
 // function detailrelated($id,$ty){
